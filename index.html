@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS</title>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <article id="temario-css">
+        <h1>Aprendiendo CSS</h1>
+        <p><i style="font-weight: bold; color: orangered;">Cascading Style Sheets</i> Hojas de Estilo en Cascada</p>
+
+        <h2>Temario del curso</h2>
+        <ul>
+            <li><a href="index.html#selectores-basicos">Selectores Básicos</a></li>
+            <li><a href="index.html#selectores-avanzados">Selectores Avanzados</a></li>
+            <li><a href="index.html#pseudoclases">Pseudoclases</a></li>
+            <li><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
+            <li><a href="index.html#agrupar-selectores">Agrupar Selectores</a></li>
+            <li><a href="index.html#algoritmo-css">Algoritmo CSS</a></li>
+            <li><a href="box-model.html">Modelo Caja</a></li>
+        </ul>
+    </article>
+    <hr>
+    <article id="selectores-basicos">
+        <h2>Selectores básicos</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At atque nostrum commodi? Ut, delectus quibusdam
+            earum ratione molestias ducimus consequuntur iste officia aliquam laudantium voluptatibus quas ipsam iusto
+            nemo. Quod.
+        </p>
+
+        <p id="parrafo-dos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit et recusandae, fugiat
+            reprehenderit blanditiis minus. Esse officiis assumenda ipsa rem perferendis, quibusdam corporis officia
+            asperiores illo non aspernatur neque ratione!</p>
+
+        <p class="text-32 bg-skyblue">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, reprehenderit quidem libero eveniet ipsa
+            quo soluta ratione quasi. Molestiae, molestias. Quas animi eos tenetur laborum ipsam at, veniam tempore
+            molestias.
+        </p>
+        <p class="text-20 bg-steelblue text-white">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum, unde quisquam. Debitis, aperiam
+            maiores fugit similique, nemo ipsum quia laboriosam obcaecati ex sunt, ea explicabo culpa aspernatur
+            voluptates quasi provident?
+        </p>
+        <p class="text-32 bg-steelblue text-white">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia dolorum laborum natus similique, eos culpa
+            perspiciatis in earum incidunt, cum iste suscipit architecto magni fugiat ea. Repudiandae amet vero
+            accusantium?
+        </p>
+        <a href="index.html#temario-css">☝️</a>
+    </article>
+    <article id="selectores-avanzados">
+        <h2>Selectores Avanzados</h2>
+        <h3>Selectores de hijos</h3>
+        <h4>Selector de hijos directos</h4>
+        <ul class="hijos-directos">
+            <li><b>Primavera</b></li>
+            <li><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+        <h4>Selector de hijos descendientes</h4>
+        <ul class="hijos-descendientes">
+            <li><b>Primavera</b></li>
+            <li><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+        <h3>Selectores de hermanos</h3>
+        <h4>Selectores de hermanos en general</h4>
+        <ul>
+            <li><b>Primavera</b></li>
+            <li class="hermanos-general"><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+        <h4>Selector de hermanos adyacente</h4>
+        <ul>
+            <li><b>Primavera</b></li>
+            <li class="hermanos-adyacentes"><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+        <h3>Selectores de Atributos</h3>
+        <nav class="selectores-atributos">
+            <ul>
+                <li><a href="https://jonmircha.com" target="_blank">Inicio</a></li>
+                <li><a class="menu-item cursos button" href="https://jonmircha.com/cursos" target="_blank">Cursos</a>
+                </li>
+                <li><a href="http://jonmircha.com/blog" target="_blank">Blog</a></li>
+                <li><a href="https://jonmircha.com/cv" target="_blank">CV</a></li>
+                background-color: midnightblue;
+                <li><a class="menu item ahora button" href="https://jonmircha.com/ahora" target="_blank">Ahora</a></li>
+                <li><a class="menu-item notas button" href="http://jonmircha.com/notas" target="_blank">Notas</a></li>
+                <li><a href="index.html#temario-css">Regresar al temario</a></li>
+            </ul>
+        </nav>
+        <h3>Selector Universal (*)</h3>
+        <ul class="selector-universal">
+            <li><b>Primavera</b></li>
+            <li><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+        </ul>
+        <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr>
+    <article id="pseudoclases">
+        <h2>Pseudoclases</h2>
+        <form action="" class="form-pseudoclases">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
+            <br>
+            <input type="email" name="correo" placeholder="Escribe tu correo" required>
+            <br>
+
+            <input type="submit" disabled>
+            <input type="submit">
+        </form>
+        <nav class="menu-pseudoclases">
+            <a href="#seccion1">Sección 1</a>
+            <a href="#seccion2">Sección 2</a>
+            <a href="#seccion3">Sección 3</a>
+            <a href="#seccion4">Sección 4</a>
+        </nav>
+        <p class="p-pseudoclases">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, fugit ex, perferendis animi porro officiis
+            sequi unde a alias assumenda maxime. Asperiores eos perspiciatis rem totam facilis voluptatibus quisquam in!
+        </p>
+        <ol class="lista-pseudoclases">
+            <li>Mú de Aries</li>
+            <li>Aldebarán de Tauro</li>
+            <li>Saga & Kanon de Géminis</li>
+            <li>Death Mask de Cáncer</li>
+            <li>Aioria de Leo</li>
+            <li>Shaka de Virgo</li>
+            <li>Dohko de Libra</li>
+            <li>Milo de Escorpión</li>
+            <li>Aioros de Sagitario</li>
+            <li>Shura de Capricornio</li>
+            <li>Camus de Acuario</li>
+            <li>Afrodita de Piscis</li>
+        </ol>
+        <article class="articulo-pseudoclases">
+            <header>Esto es una header</header>
+            <p>Esto es un p</p>
+            <div>Esto es una div</div>
+            <p>Esto es un p</p>
+            <section>Esto es una section</section>
+            <p>Esto es un p</p>
+            <div>Esto es una div</div>
+            <p>Esto es un p</p>
+            <footer>Esto es un footer</footer>
+        </article>
+        <a href="index.html#temario-css">☝️</a>
+    </article>
+    <hr>
+    <article id="pseudoelementos">
+        <h2>Pseudoelementos</h2>
+        <p>
+            <i>Bandai Myth Cloth Ex</i><span class="saga-geminis">Saga de Géminis</span>
+            <span class="saga-precio">500</span>
+        </p>
+        <p class="p-pseudoelementos">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis tempora laboriosam amet tenetur in
+            libero numquam doloribus reprehenderit, vero, unde beatae, sint blanditiis quia quam? Assumenda saepe vitae
+            doloremque omnis.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, molestias quibusdam minus libero ad
+            corrupti in optio officiis animi fuga non maiores accusantium maxime id vitae aliquam, dicta voluptatem
+            aliquid.
+        </p>
+        <input class="input-pseudoelementos" type="text" name="nombre" placeholder="Escribí tu nombre">
+    </article>
+    <hr>
+    <article id="agrupar-selectores">
+        <h2>Agrupar Selectores</h2>
+        <form class="form-agrupar-selectores">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre">
+            <input type="email" name="correo" placeholder="Escribe tu correo">
+            <textarea name="comentarios" placeholder="Escribe tus comentarios" cols="30" rows="10"></textarea>
+            <input type="submit">
+        </form>
+        <hr>
+        <a href="index.html#temario-css">☝️</a>
+
+    </article>
+    <hr>
+    <article id="algoritmo-css">
+        <h2>El Algoritmo de CSS</h2>
+        <ul>
+            <li>La Cascada</li>
+            <li>La Especificidad</li>
+            <li>La Herencia</li>
+        </ul>
+        <blockquote id="cita-marco" class="cita-marco" style="background-color: rebeccapurple;">
+            Sé tolerante con los demás y estricto contigo mismo - <cite>Marco Aurelio</cite>
+        </blockquote>
+        <hr>
+        <a href="index.html#temario-css">☝️</a>
+
+    </article>
+    <hr>
+    <a href="index.html#temario-css">☝️</a>
+    <hr>
+</body>
+
+</html>
