@@ -1,0 +1,75 @@
+/*
+Tipos de posicionamiento:
+-Static(defaul)
+-relative
+-absolute
+-fixed
+-sticky 
+
+
+Para mover los elementos posicionados se activan las propiedades:
+
+-top(vertical -eje Y)
+-bottom (vertical -eje Y)
+-left (horizontal -eje X)
+-right (horizontal -eje X)
+-z-index (profundidad-eje-Z)
+
+Las propiedades top y left van a tener preferencia por sobre bottom y right respectivamente
+
+Estas 5 propiedades no funcionan con el valore de static
+
+
+*/
+
+
+/* static: Es el valor por defecto, significa que el elemento respeta el flujo
+del documento HTML, por lo que no se puede mover ni posicionar */
+.static {
+    background-color: yellow;
+}
+
+/*relative: El elemento conserva sus dimensiones y posición original en el flujo del documento.
+Si se mueve toma como referencia su posición original*/
+
+.relative {
+    background-color: turquoise;
+    position: relative;
+    top: 100px;
+    left: 900px;
+    height: 50px;
+    width: 300px;
+
+}
+
+/*
+absolute: El elemento pierde sus dimensiones y posición original en el flujo
+del documento. Si se mueve puede tomar como referencia 2 elementos:
+1)El primer ancestro con posicionamiento relativo
+2)Si no encuentra un ancestro relativo, se mueve respecto del documento HTML
+*/
+
+.absolute {
+    background-color: tomato;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    /* top: 0;
+    left: 0; */
+    right: 0;
+    bottom: 0;
+}
+
+.relative-parent {
+    background-color: khaki;
+    width: 600px;
+    height: 50px;
+    position: relative;
+}
+
+.absolute-child {
+    background-color: lightcoral;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
